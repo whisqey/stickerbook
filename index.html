@@ -3,95 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sticker Collection Tracker</title>
+  <title>Sticker Collection</title>
   <style>
-    /* Body styling */
     body {
       font-family: Arial, sans-serif;
-      background-color: #f0f8ff;
+      background-color: #f0f0f0;
       color: #333;
       margin: 0;
-      padding: 20px;
+      padding: 0;
     }
-    
-    /* Center the content */
-    .container {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: #fff;
+    header {
+      background-color: #4CAF50;
+      color: white;
       padding: 20px;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 10px;
-    }
-    
-    /* Heading */
-    h1 {
       text-align: center;
-      color: #2c3e50;
-      font-size: 2em;
-      margin-bottom: 20px;
     }
-    
-    /* Styling for each sticker item */
+    .container {
+      width: 80%;
+      margin: auto;
+      padding: 20px;
+    }
     .sticker {
-      display: flex;
-      align-items: center;
+      display: inline-block;
+      width: 200px;
+      margin: 20px;
+      text-align: center;
+    }
+    .sticker img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .sticker h2 {
+      font-size: 18px;
+      margin: 10px 0;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #007BFF;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
       padding: 10px;
-      border-bottom: 1px solid #e0e0e0;
-    }
-    
-    /* Checkbox */
-    input[type="checkbox"] {
-      margin-right: 15px;
-      transform: scale(1.2);
-    }
-    
-    /* Label for stickers */
-    label {
-      font-size: 1.2em;
-    }
-    
-    /* Add some hover effect */
-    .sticker:hover {
-      background-color: #f9f9f9;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Sticker Collection</h1>
+  </header>
+  
   <div class="container">
-    <h1>Sticker Collection Tracker</h1>
-
-    <div class="sticker">
-      <input type="checkbox" id="sticker1">
-      <label for="sticker1">Sticker 1</label>
-    </div>
-
-    <div class="sticker">
-      <input type="checkbox" id="sticker2">
-      <label for="sticker2">Sticker 2</label>
-    </div>
-
-    <div class="sticker">
-      <input type="checkbox" id="sticker3">
-      <label for="sticker3">Sticker 3</label>
-    </div>
+    <section>
+      <div class="sticker">
+        <img src="images/ORIGINAL.png" alt="Original Sticker">
+        <h2>Original Sticker</h2>
+      </div>
+      <div class="sticker">
+        <img src="images/GLITCH.png" alt="Glitch Sticker">
+        <h2>Glitch Sticker</h2>
+      </div>
+    </section>
+    
+    <footer>
+      <a href="https://whisqey.co" class="button">Back to Whisqey</a>
+      <p>&copy; 2024 Whisqey. All rights reserved.</p>
+    </footer>
   </div>
-
-  <script>
-    // Store checkbox state in LocalStorage
-    document.addEventListener('DOMContentLoaded', function () {
-      const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-      
-      checkboxes.forEach(checkbox => {
-        // Load saved state
-        checkbox.checked = localStorage.getItem(checkbox.id) === 'true';
-        
-        // Save state when checkbox is clicked
-        checkbox.addEventListener('change', function () {
-          localStorage.setItem(checkbox.id, checkbox.checked);
-        });
-      });
-    });
-  </script>
 </body>
 </html>
