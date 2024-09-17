@@ -3,33 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticker Catalog</title>
+    <title>My Stickerbook</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <a href="https://whisqey.co" id="logo-link">
-            <img src="images/logo.png" alt="Whisqey Logo">
-        </a>
+        <div class="banner">
+            <a href="https://whisqey.co">Back to Whisqey.co</a>
+        </div>
+        <h1>My Stickerbook</h1>
     </header>
-    <main>
-        <section id="stickers">
-            <div class="sticker">
-                <img src="images/ORIGINAL.png" alt="Base Sticker">
+
+    <section class="series" id="series1">
+        <h2>Series 1</h2>
+        <div class="sticker-container">
+            <div class="sticker original">
+                <img src="images/ORIGINAL.png" alt="Original Sticker">
                 <label>
-                    <input type="checkbox">
-                    Base Sticker
+                    <input type="checkbox" class="ownership-checkbox">
+                    Own it? Click here
                 </label>
             </div>
-            <div class="sticker">
-                <img src="images/GLITCH.png" alt="Special Sticker">
+            <div class="sticker glitch">
+                <img src="images/GLITCH.png" alt="Glitch Sticker">
                 <label>
-                    <input type="checkbox">
-                    Special Sticker
+                    <input type="checkbox" class="ownership-checkbox">
+                    Own it? Click here
                 </label>
             </div>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
+        </div>
+    </section>
+
+    <section class="exclusives">
+        <h2>Event Exclusives / Seasonal</h2>
+        <!-- Add exclusive stickers here -->
+    </section>
 </body>
 </html>
